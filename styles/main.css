@@ -26,8 +26,6 @@ html, body, a {
   
 }
 
-
-
 body {
   height: -webkit-fill-available;
   margin-left: 91px;
@@ -36,8 +34,6 @@ body {
   margin-bottom: 93px;
 
   }
-
-
 
 .grid {
   max-height: 100%;
@@ -62,8 +58,6 @@ body {
   grid-row: 1/4;
 }
 
-
-
 ::selection {
   background: rgb(10, 10, 10);
   color: rgb(245, 245, 245);
@@ -71,14 +65,4 @@ body {
 
 a:hover{
   font-variation-settings: "wdth" 90, "wght" 350, "ital" 12, "CNTR" 0;
-}
-
-/* .grid div {
-  background: rgb(190, 112, 112);
-  opacity: .2;
-}
-
-.grid div:nth-child(even) {
-  background: rgb(78, 78, 198);
-  opacity: .2;
 }
