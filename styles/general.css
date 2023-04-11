@@ -3,12 +3,7 @@
 /** RESET CSS **/
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main{display:block;}
 
-@font-face {
-  font-family: 'Antarctica';
-  src: url('/fonts/Antarctica.ttf') format('truetype');
-  font-weight: 1 950;
 
-}
 
 html, body, a {
   height: -webkit-fill-available;
