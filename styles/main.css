@@ -26,11 +26,11 @@ a {
 }
 
 body {
-  margin-left: 91px;
-  margin-top: 30px;
+  margin-left: 25px;
+  margin-top: 3px;
   margin-right: 91px;
   margin-bottom: 93px;
-  font-size: 2rem;
+  font-size: 1rem;
   line-height: 1.23em;
   font-family: Antarctica, Helvetica, Arial, sans-serif;
   font-variation-settings: "wdth" 90, "wght" 350, "ital" 1, "CNTR" 0;
@@ -46,7 +46,7 @@ body {
   overflow: hidden;
   margin: 0;
   grid-template-columns: repeat(8, 1fr);
-  grid-column-gap: 85px;
+  grid-column-gap:21px;
   grid-template-rows: 1fr;
 }
 
