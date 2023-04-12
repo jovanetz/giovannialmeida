@@ -5,12 +5,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display:block;
 }
 
-@font-face {
-  font-family: 'Antarctica';
-  src: url('/fonts/Antarctica.ttf') format('truetype');
-  font-weight: 1 950;
 
-}
 
 html, body, a {
   height: -webkit-fill-available;
@@ -21,10 +16,8 @@ html, body, a {
   color: black;
   font-size: 1.95rem;
   line-height: 1.23em;
-  font-family: Antarctica, Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   text-decoration: none;
-  font-variation-settings: "wdth" 90, "wght" 350, "ital" 1, "CNTR" 0;
-  transition: font-variation-settings 150ms;
   
 }
 
@@ -71,9 +64,7 @@ body {
   color: rgb(245, 245, 245);
 }
 
-a:hover{
-  font-variation-settings: "wdth" 90, "wght" 350, "ital" 12, "CNTR" 0;
-}
+
 
 .grid div {
   background: rgb(190, 112, 112);
