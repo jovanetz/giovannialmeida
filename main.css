@@ -14,7 +14,7 @@
 /* Load typeface */
 @font-face {
   font-family: 'Antarctica';
-  src: url('../fonts/Antarctica.ttf') format('truetype-variations');
+  src: url('./fonts/Antarctica.ttf') format('truetype-variations');
   /* "wdth" 001-200, "wght" 001-950, "ital" 01-12, "CNTR" 000-100 */
 }
 
