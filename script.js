@@ -16,6 +16,6 @@ console.log(hours, minutes, seconds);
   var t = setTimeout(realtimeClock, 500);
 
   document.getElementById('clock').innerHTML =
-  new Date ().toLocaleString("en-US",{timeZone: 'Europe/Zurich', timeStyle: 'medium', hourCycle: 'h23'});
+  new Date ().toLocaleString("en-US",{timeZone: 'America/Sao_Paulo', timeStyle: 'medium', hourCycle: 'h23'});
 
 }
