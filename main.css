@@ -95,9 +95,9 @@ p, a {
   html, body, a, p {
   height: -webkit-fill-available;
   overflow: hidden;
-  font-size: 0.92rem;
+  font-size: 0.94rem;
   letter-spacing: 0.001rem;
-  line-height: 1.12em;  
+  line-height: 1.18em;  
   }
 
   body {
