@@ -13,6 +13,7 @@ function setup() {
   canvas = createCanvas(windowWidth, windowHeight);
   canvas.position(0, 0);
   canvas.style('z-index', '-1');
+  frameRate(1);
 
 }  
 
@@ -45,36 +46,6 @@ if (windowWidth > 1000) {
   var mRs 
   = (windowWidth - m) - ((windowWidth - ((4 * c) + (4 * g)) - m))*0.1
 
-
-  /*
-
-  // Define mouse horizontal mapping
-  var mX = map  (mouseX,
-  // Min/Max
-  // Before
-  0,                                      windowWidth, 
-  // After   
-  mLs,                                    mRs
-  //
-  );
-
-  // Define mouse vertical mapping
-  var mY = map  (mouseY,      
-  // Min/Max
-  // Before
-  0,                                      windowHeight,
-  // After      
-  ((mLs / 2) - ((mLs / 2) * 0.865)),        mLs / 1.024
-  //
-  );
-
-  // Interactive rectangle
-  noStroke();
-  fill(250);
-  rect(mX, 0, windowWidth, mY);
-
-  */
-
   // Static rectangle 
   noStroke();
   fill(243);
@@ -89,4 +60,45 @@ if (windowWidth > 1000) {
 else {
 
 }
+
+// Dimensions of the grey rectangle
+let rectX = mLs;
+let rectY = 0;
+let rectW = windowWidth - mLs;
+let rectH = mLs / 1.024;
+
+// Check if mouse is over the grey rectangle
+if (
+  mouseX >= rectX &&
+  mouseX <= rectX + rectW &&
+  mouseY >= rectY &&
+  mouseY <= rectY + rectH
+) {
+  stroke(0);
+  noFill();  // No fill for curves
+  
+  let numCurves = 1;  // Adjust this number to change the number of curves drawn
+  
+  for (let i = 0; i < numCurves; i++) { // Number of random curves per frame
+    beginShape();
+    
+    // Start from a random initial point
+    let x = random(rectX, rectX + rectW);
+    let y = random(rectY, rectY + rectH);
+    curveVertex(x, y);
+    
+    // Generate jagged random points
+    for (let j = 0; j < 10; j++) { // Increase the number of points for more jaggedness
+      // Add large random offsets for jaggedness
+      let xOffset = random(-50, 50); 
+      let yOffset = random(-50, 50);
+      x += xOffset;  // Apply the random offset to the current x position
+      y += yOffset;  // Apply the random offset to the current y position
+      curveVertex(x, y);
+    }
+
+    endShape();
+  }
+}
+
 }
