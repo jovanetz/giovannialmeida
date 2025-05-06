@@ -29,7 +29,7 @@ html {
 /* Body tag */
 body {
   font-family: Antarctica, Helvetica, Arial, sans-serif;
-  font-variation-settings: "wdth" 88, "wght" 430, "ital" 1, "CNTR" 0;
+  font-variation-settings: "wdth" 88, "wght" 400, "ital" 1, "CNTR" 0;
   transition: font-variation-settings 350ms;
   text-rendering: geometricPrecision;
 }
