@@ -138,7 +138,7 @@ p, a {
 
 /* Hover links */
 a:hover{
-  font-variation-settings: "wdth" 88, "wght" 430, "ital" 12, "CNTR" 0;
+  font-variation-settings: "wdth" 88, "wght" 430, "ital" 1, "CNTR" 0;
   }
 }
 
