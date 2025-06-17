@@ -140,6 +140,9 @@ p, a {
 a:hover{
   font-variation-settings: "wdth" 88, "wght" 430, "ital" 1, "CNTR" 0;
   }
+a:hover .red-on-hover {
+  color: #ff0003;
+  }
 }
 
 /*
