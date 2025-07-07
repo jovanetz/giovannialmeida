@@ -139,8 +139,6 @@ p, a {
 /* Hover links */
 a:hover{
   font-variation-settings: "wdth" 88, "wght" 430, "ital" 1, "CNTR" 0;
-  }
-a:hover .red-on-hover {
   color: rgb(215, 215, 215);
   }
 }
