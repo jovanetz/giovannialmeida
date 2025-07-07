@@ -22,9 +22,6 @@ if (windowWidth > 1000) {
   background(255); 
   noFill(); 
 
-
-  
-
   // Define margin
   var m = 24;
 
@@ -49,23 +46,15 @@ if (windowWidth > 1000) {
   // Static rectangle 
   noStroke();
   fill(243);
-  rect(mLs, 0, windowWidth, mLs / 1.024);
-
-  // Draw mask
-  fill(255);
-  noStroke();
-  rect(0, 0, windowWidth, m);
-  rect(windowWidth - m, 0, m, windowHeight);
-}
-else {
-
+  rect(mLs, m, windowWidth - 763, mLs / 1.024);
 }
 
 // Dimensions of the grey rectangle
 let rectX = mLs;
-let rectY = 0;
-let rectW = windowWidth - mLs;
+let rectY = 24;
+let rectW = windowWidth - 763;
 let rectH = mLs / 1.024;
+
 
 // Check if mouse is over the grey rectangle
 if (
@@ -74,9 +63,10 @@ if (
   mouseY >= rectY &&
   mouseY <= rectY + rectH
 ) {
-  stroke(0);
-  noFill();  // No fill for curves
-  
+
+stroke(30, 30, 30);
+noFill();  // No fill for curves
+
   let numCurves = 1;  // Adjust this number to change the number of curves drawn
   
   for (let i = 0; i < numCurves; i++) { // Number of random curves per frame
@@ -88,17 +78,27 @@ if (
     curveVertex(x, y);
     
     // Generate jagged random points
-    for (let j = 0; j < 10; j++) { // Increase the number of points for more jaggedness
+    for (let j = 0; j < 14; j++) { // Increase the number of points for more jaggedness
       // Add large random offsets for jaggedness
-      let xOffset = random(-50, 50); 
+      let xOffset = random(-80, 50); 
       let yOffset = random(-50, 50);
-      x += xOffset;  // Apply the random offset to the current x position
-      y += yOffset;  // Apply the random offset to the current y position
-      curveVertex(x, y);
+      
+      x += xOffset;
+      y += yOffset;
+
+      // Constrain the point to stay inside the rectangle
+      x = constrain(x + 3, rectX - 3, rectX + rectW + 3);
+      y = constrain(y + 3, rectY - 3, rectY + rectH + 3);
+
+curveVertex(x, y);
     }
 
     endShape();
   }
+
+}
+
+else {
 }
 
 }
