@@ -46,13 +46,13 @@ if (windowWidth > 1000) {
   // Static rectangle 
   noStroke();
   fill(243);
-  rect(mLs, m, windowWidth - 763, mLs / 1.024);
+  rect(mLs, m, windowWidth * 0.47703906785, mLs / 1.024);
 }
 
 // Dimensions of the grey rectangle
 let rectX = mLs;
 let rectY = 24;
-let rectW = windowWidth - 763;
+let rectW = windowWidth * 0.47703906785;
 let rectH = mLs / 1.024;
 
 
